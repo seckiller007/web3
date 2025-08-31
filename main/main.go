@@ -18,22 +18,33 @@ func numbers() (int, int, string) {
 }
 
 func main() {
-	s2 := make([]int, 3, 4)
-	fmt.Println(s2)
-
-	s2 = append(s2, 7)
-	fmt.Println(s2)
-
-	s3 := make([]int, 4)
-	fmt.Println(s3)
-
-	var intarr [6]int = [6]int{1, 2, 3, 4, 5, 6}
-	//切出一片数组。从1到3，左闭右开
-	var slice []int = intarr[1:3]
-	fmt.Println(slice)
-	//_的用法
-	_, numb, strs := numbers() //只获取函数返回值的后两个，_
-	fmt.Println(numb, strs)
+	//s2 := make([]int, 3, 4)
+	//fmt.Println(s2)
+	//
+	//s2 = append(s2, 7)
+	//fmt.Println(s2)
+	//
+	//s3 := make([]int, 4)
+	//fmt.Println(s3)
+	//
+	//var intarr [6]int = [6]int{1, 2, 3, 4, 5, 6}
+	////切出一片数组。从1到3，左闭右开
+	//var slice []int = intarr[1:3]
+	//fmt.Println(slice)
+	////_的用法
+	//_, numb, strs := numbers() //只获取函数返回值的后两个，_
+	//fmt.Println(numb, strs)
 	f := getSum()
 	fmt.Println(f(1))
+	//db := initDB()
+	//if db == nil {
+	//	fmt.Println("数据库连接失败，程序退出")
+	//	return
+	//}
+	//
+	//// 自动迁移数据表
+	//migrateTables(db)
+	//
+	//// 执行数据操作
+	//createStudents(db)
 }
