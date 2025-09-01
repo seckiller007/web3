@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 返回值一个函数 func (int) int    第一个int是参数，第二个int是函数返回值
 func getSum() func(int) int {
@@ -47,4 +49,16 @@ func main() {
 	//
 	//// 执行数据操作
 	//createStudents(db)
+	//dsn := "root:123456@tcp(127.0.0.1:3306)/web3?parseTime=true&charset=utf8mb4&loc=Local"
+	//db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	//if err != nil {
+	//	println("failed to connect database: " + err.Error())
+	//}
+	//
+	//// 示例：创建文章（会自动触发Post的AfterCreate钩子）
+	//newPost := Post{Title: "测试文章", Content: "这是一篇测试文章", UserID: 1}
+	//db.Create(&newPost)
+	//
+	//// 示例：删除评论（会自动触发Comment的AfterDelete钩子）
+	//db.Delete(&Comment{}, 1)
 }

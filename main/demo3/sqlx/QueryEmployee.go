@@ -29,19 +29,7 @@ func getHighestSalaryEmployee(db *sqlx.DB) (Employee, error) {
 	}
 	return employee, nil
 }
-func initDB(dsn string) (*sqlx.DB, error) {
-	db, err := sqlx.Open("mysql", dsn)
-	if err != nil {
-		return nil, fmt.Errorf("打开数据库失败: %v", err)
-	}
 
-	// 测试连接
-	if err := db.Ping(); err != nil {
-		return nil, fmt.Errorf("连接数据库失败: %v", err)
-	}
-
-	return db, nil
-}
 func main() {
 	// 数据库连接信息 (根据实际情况修改)
 	dsn := "root:123456@tcp(127.0.0.1:3306)/web3?parseTime=true&charset=utf8mb4&loc=Local"
