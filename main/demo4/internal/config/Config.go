@@ -12,7 +12,7 @@ import (
 // 定义全局配置结构
 var (
 	config *Configuration
-	once   sync.Once
+	once   sync.Once //使用 sync.Once 保证 InitConfig 函数只会被执行一次，确保配置只加载一次，sync.Once 确保并发环境下配置加载的安全性
 )
 
 // Configuration 结构体对应配置文件内容
