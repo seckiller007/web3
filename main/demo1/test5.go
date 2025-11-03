@@ -7,7 +7,7 @@ func plusOne(digits []int) []int {
 	for i := len(digits) - 1; i >= 0; i-- {
 		//加一也就是个位+1，最后位+1，若末位加一进一，取模会等于0，继续循环
 		digits[i]++
-		digits[i] %= 10 //加完之后对10取模，若为0说明这一位是9
+		digits[i] %= 10 //加完之后对10取模，若为0说明这一位是9  digits[i] = digits[i] % 10
 		if digits[i] != 0 {
 			return digits
 		}

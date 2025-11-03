@@ -14,7 +14,7 @@ func isPalindrome(x int) bool {
 	}
 	reverse := 0
 	//对x进行每个位上的数字获取
-	for x > reverse {
+	for x > reverse { //x大于等于reverse时，循环结束了,只需要反转一半
 		//不断更新反转数字
 		reverse = reverse*10 + x%10
 		x = x / 10 //x不断减除一位后的剩余数字
