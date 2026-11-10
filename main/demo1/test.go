@@ -11,7 +11,6 @@ package main
 // ['1','1','0','0','0'],
 // ['0','0','0','0','0']
 // ]
-// 输出：1
 func numIslands(grid [][]byte) int {
 	if len(grid) == 0 {
 		return 0
